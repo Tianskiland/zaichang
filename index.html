@@ -22,60 +22,67 @@
   @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
   @keyframes toastIn{from{opacity:0;transform:translateY(10px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
   .fade{animation:fadeIn .3s ease}
-  .hdr{padding:34px 24px 14px;background:linear-gradient(180deg,rgba(90,80,72,.04),transparent)}
+  .hdr{padding:34px 24px 8px}
   .hdr h1{font-family:'Noto Serif SC',serif;font-size:32px;font-weight:700;letter-spacing:8px;margin-bottom:4px}
   .hdr p{font-size:13px;color:#a09888;letter-spacing:2px;font-weight:300}
-  .tabs{display:flex;padding:0 24px;margin-bottom:18px;border-bottom:1px solid rgba(120,100,80,.08)}
+  .quote{margin:14px 24px 4px;padding:16px 18px 16px 20px;border-radius:12px;background:rgba(255,252,248,.78);
+    border:1px solid rgba(120,100,80,.10);border-left:3px solid #D4764E;position:relative}
+  .quote .s{font-family:'Noto Serif SC',serif;font-size:16px;line-height:1.9;color:#4a4035;letter-spacing:.5px}
+  .quote .meta{display:flex;align-items:center;justify-content:space-between;margin-top:11px}
+  .quote .sc{font-size:13px;color:#B07A4E;letter-spacing:1px}
+  .quote .refresh{font-size:13px;color:#b0a898;letter-spacing:1px;background:none;border:none}
+  .tabs{display:flex;padding:0 24px;margin:10px 0 18px;border-bottom:1px solid rgba(120,100,80,.08)}
   .tab{background:none;border:none;padding:9px 16px;font-size:15px;font-weight:400;color:#a09888;
     border-bottom:2px solid transparent;letter-spacing:2px;transition:all .2s}
   .tab.on{color:#3a3228;font-weight:600;border-bottom-color:#3a3228}
   .body{padding:0 24px}
   .dline{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
   .dline .d{font-family:'Noto Serif SC',serif;font-size:20px;font-weight:600;letter-spacing:2px}
-  .dline .today{font-size:12px;color:#D4764E;font-weight:500;margin-top:2px;letter-spacing:1px}
-  .backbtn{background:none;border:1px solid rgba(120,100,80,.15);border-radius:8px;padding:5px 12px;font-size:13px;color:#8a8078;letter-spacing:1px}
+  .dline .today{font-size:13px;color:#D4764E;font-weight:500;margin-top:2px;letter-spacing:1px}
+  .backbtn{background:none;border:1px solid rgba(120,100,80,.15);border-radius:8px;padding:5px 12px;font-size:13px;color:#8a8078}
   .cat{margin-bottom:16px;border-left:3px solid;padding-left:14px}
-  .catbar{display:flex;align-items:center;justify-content:space-between;padding:6px 0}
+  .catbar{display:flex;align-items:center;justify-content:space-between;padding:8px 0}
   .catbar .left{display:flex;align-items:center;gap:7px;font-family:'Noto Serif SC',serif}
-  .catbar .ico{font-size:15px;font-weight:600}
-  .catbar .lbl{font-size:15px;font-weight:600;letter-spacing:2px}
+  .catbar .ico{font-size:16px;font-weight:600}
+  .catbar .lbl{font-size:16px;font-weight:600;letter-spacing:2px}
+  .catbar .tag{font-size:11px;font-weight:400;padding:1px 7px;border-radius:8px;background:rgba(120,100,80,.10);color:#9a9088;font-family:'Noto Sans SC',sans-serif}
+  .catbar .tag.core{background:rgba(212,118,78,.14);color:#C0603A}
   .catbar .dot{width:6px;height:6px;border-radius:50%;opacity:.5}
   .catbar .right{display:flex;align-items:center;gap:8px}
-  .exbtn{background:none;border:1px solid;border-radius:6px;padding:3px 10px;font-size:12px;letter-spacing:1px}
+  .exbtn{background:none;border:1px solid;border-radius:6px;padding:3px 10px;font-size:13px;letter-spacing:1px;font-family:'Noto Sans SC',sans-serif}
   .chev{font-size:16px;color:#b0a898;transition:transform .2s;display:inline-block}
   .chev.open{transform:rotate(90deg)}
   .preview{font-size:14px;color:#8a8078;margin-top:4px;line-height:1.6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .sub{font-size:14px;font-weight:600;letter-spacing:1px;margin:14px 0 8px;padding-bottom:5px;border-bottom:1px solid rgba(120,100,80,.10)}
   .fld{margin-bottom:10px}
   .fld label{font-size:14px;font-weight:500;color:#8a8078;margin-bottom:4px;display:block;letter-spacing:1px}
-  .fld input,.fld textarea{width:100%;padding:8px 12px;border:1px solid rgba(120,100,80,.10);border-radius:6px;
-    font-size:15px;line-height:1.7;color:#3a3228;background:rgba(255,252,248,.5);transition:border-color .2s}
-  .fld input{height:36px}
-  .fld textarea{min-height:64px;resize:none;overflow:hidden}
-  .splithint{border-radius:8px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
-  .splithint .t{font-size:15px;font-weight:600;letter-spacing:1px}
-  .splithint .v{font-size:15px;font-weight:500}
+  .fld input,.fld textarea{width:100%;padding:9px 12px;border:1px solid rgba(120,100,80,.10);border-radius:6px;font-size:15px;line-height:1.7;color:#3a3228;background:rgba(255,252,248,.5);transition:border-color .2s}
+  .fld input{height:38px}
+  .fld textarea{min-height:60px;resize:none;overflow:hidden}
+  .modesw{display:flex;gap:8px;margin-bottom:12px}
+  .modesw button{flex:1;padding:9px 0;border-radius:7px;border:1px solid;font-size:13px;font-weight:600;letter-spacing:1px}
   .picker{margin-bottom:12px}
   .picker .row{display:flex;gap:8px}
-  .picker .pbtn{padding:8px 0;border-radius:7px;border:1px solid;background:transparent;font-size:14px;font-weight:600;letter-spacing:2px}
+  .picker .pbtn{padding:9px 0;border-radius:7px;border:1px solid;background:transparent;font-size:13px;font-weight:600;letter-spacing:2px}
   .picker .panel{background:rgba(255,252,248,.7);border:1px solid rgba(120,100,80,.10);border-radius:10px;padding:12px;margin-top:10px}
   .picker .ctabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
-  .picker .ctab{padding:4px 10px;border-radius:14px;border:none;font-size:13px;letter-spacing:.5px;transition:all .15s}
-  .picker .topic{padding:8px 10px;border-radius:6px;font-size:15px;color:#5a5048;line-height:1.5;transition:background .15s}
-  .excard{background:rgba(255,250,240,.92);border:1px solid;border-radius:10px;padding:14px 16px;margin-bottom:14px}
-  .excard .h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
-  .excard .h .t{font-size:14px;font-weight:600;letter-spacing:2px}
-  .excard .h .x{background:none;border:none;font-size:19px;color:#b0a898;line-height:1}
-  .excard .k{font-size:13px;font-weight:500;color:#a09888;margin-bottom:2px;letter-spacing:1px}
-  .excard .v{font-size:15px;line-height:1.8;color:#5a5048;white-space:pre-wrap;margin-bottom:8px}
-  .excard .rule{margin-top:6px;padding-top:10px;border-top:1px dashed rgba(120,100,80,.12);font-size:13px;color:#a09888;line-height:1.7;white-space:pre-wrap}
-  .rulehint{font-size:12px;color:#b0a898;margin-top:4px;margin-bottom:6px;line-height:1.6;border-top:1px dashed rgba(120,100,80,.08);padding-top:8px;white-space:pre-wrap}
+  .picker .ctab{padding:5px 11px;border-radius:14px;border:none;font-size:13px;letter-spacing:.5px}
+  .picker .topic{padding:9px 10px;border-radius:6px;font-size:14px;color:#5a5048;line-height:1.5}
+  .splithint{border-radius:8px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .splithint .t{font-size:14px;font-weight:600;letter-spacing:1px}
+  .splithint .v{font-size:14px;font-weight:500}
+  .note-soft{font-size:13px;color:#7a8a6e;background:rgba(122,154,126,.10);border-radius:8px;padding:9px 12px;margin:8px 0 4px;line-height:1.6}
+  .ptags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
+  .ptag{padding:7px 13px;border-radius:16px;border:1px solid;font-size:13px;letter-spacing:.5px;transition:all .15s;background:transparent}
+  .ptag.on{color:#fff}
+  .rulehint{font-size:13px;color:#b0a898;margin-top:4px;margin-bottom:6px;line-height:1.6;border-top:1px dashed rgba(120,100,80,.08);padding-top:8px;white-space:pre-wrap}
   .actions{display:flex;gap:10px;margin-top:20px}
-  .savebtn{flex:1;padding:13px 0;border-radius:10px;border:none;color:#F7F3EE;font-size:15px;font-weight:600;letter-spacing:3px;transition:all .2s}
-  .delbtn{padding:13px 16px;border-radius:10px;border:1px solid rgba(200,80,60,.2);background:transparent;color:#c8503c;font-size:14px;letter-spacing:1px}
+  .savebtn{flex:1;padding:14px 0;border-radius:10px;border:none;color:#F7F3EE;font-size:15px;font-weight:600;letter-spacing:3px;transition:all .2s}
+  .delbtn{padding:14px 16px;border-radius:10px;border:1px solid rgba(200,80,60,.2);background:transparent;color:#c8503c;font-size:13px;letter-spacing:1px}
   .cal{background:rgba(255,252,248,.85);border-radius:14px;padding:16px 14px 12px;border:1px solid rgba(120,100,80,.08)}
   .cal .nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;padding:0 4px}
-  .cal .nav button{background:none;border:none;font-size:21px;color:#8a8078;padding:2px 8px}
-  .cal .nav .m{font-family:'Noto Serif SC',serif;font-size:16px;font-weight:600;letter-spacing:1px}
+  .cal .nav button{background:none;border:none;font-size:18px;color:#8a8078;padding:2px 8px}
+  .cal .nav .m{font-family:'Noto Serif SC',serif;font-size:15px;font-weight:600;letter-spacing:1px}
   .cal .wk{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;text-align:center;margin-bottom:4px}
   .cal .wk div{font-size:12px;color:#9a9088;font-weight:500;padding:3px 0}
   .cal .days{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;justify-items:center}
@@ -86,13 +93,13 @@
   .cal .day.sel .d{background:#fff}
   .sectitle{font-size:14px;font-weight:500;color:#8a8078;letter-spacing:2px;margin:18px 0 10px}
   .reccard{padding:12px 14px;background:rgba(255,252,248,.7);border-radius:10px;margin-bottom:7px;border:1px solid rgba(120,100,80,.06)}
-  .reccard .rd{font-size:15px;font-weight:500;margin-bottom:5px}
+  .reccard .rd{font-size:14px;font-weight:500;margin-bottom:5px}
   .reccard .tags{display:flex;gap:8px;flex-wrap:wrap}
   .reccard .tags span{font-size:12px;font-weight:500;letter-spacing:1px}
-  .empty{text-align:center;color:#b0a898;font-size:15px;padding:20px;font-style:italic}
+  .empty{text-align:center;color:#b0a898;font-size:14px;padding:20px;font-style:italic}
   .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:22px}
   .scard{background:rgba(255,252,248,.7);border-radius:10px;padding:14px 10px;border:1px solid rgba(120,100,80,.06);text-align:center}
-  .scard .n{font-size:28px;font-weight:700;font-family:'Noto Serif SC',serif}
+  .scard .n{font-size:26px;font-weight:700;font-family:'Noto Serif SC',serif}
   .scard .l{font-size:12px;color:#9a9088;margin-top:3px;letter-spacing:1px}
   .barrow{margin-bottom:12px}
   .barrow .bh{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
@@ -103,7 +110,7 @@
   .heat{display:flex;flex-wrap:wrap;gap:3px}
   .heatd{width:20px;height:20px;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:500}
   #toast{position:fixed;bottom:40px;left:50%;transform:translateX(-50%);background:#3a3228;color:#F7F3EE;
-    padding:10px 24px;border-radius:20px;font-size:15px;font-weight:500;z-index:999;letter-spacing:1px;
+    padding:10px 24px;border-radius:20px;font-size:14px;font-weight:500;z-index:999;letter-spacing:1px;
     box-shadow:0 4px 20px rgba(0,0,0,.15);animation:toastIn .25s ease;display:none}
 </style>
 </head>
@@ -113,398 +120,321 @@
 <script>
 "use strict";
 
-var CATS = [
-  {
-    id:"exercise", label:"运动训练", icon:"◆", color:"#D4764E", weekdaySplit:true,
-    fields:[
-      {key:"wakeup", label:"唤醒操（10min·每日）", ph:"完成 / 跳过 + 今早身体状态"},
-      {key:"main", label:"今日主训练", ph:"（一三五 上肢：吊杆·俯卧撑 / 二四六 下肢：深蹲）"},
-      {key:"spec", label:"动作·组数·次数·进度", ph:"如：俯卧撑 4组×15 · 第2周/4周"},
-      {key:"cardio", label:"有氧（多走一站地铁）", ph:"完成 / 今日步数 / 提前几站下车"},
-      {key:"feel", label:"身体感受", ph:"泵感、力竭、酸痛、代偿…"},
-      {key:"note", label:"备注", ph:"体态变化、下次调整方向…", multi:true}
-    ],
-    example:{
-      wakeup:"完成。今早起床略僵，唤醒操后肩颈打开，状态进入得比平时快",
-      main:"周三 · 上肢训练（吊杆 + 俯卧撑）",
-      spec:"吊杆悬垂 3组×30秒（握力是短板）｜俯卧撑 4组×15，最后一组到力竭｜第2周 / 共4周",
-      cardio:"完成。提前一站下地铁，多走约1.2km / 今日步数 9800",
-      feel:"俯卧撑第3组起核心开始晃，说明稳定性不足。吊杆后小臂酸胀明显",
-      note:"体态重塑进度：上肢线条比上月清晰。下周俯卧撑尝试加到4组×18。握力弱是吊杆的瓶颈，考虑加一个握力器作为日常补充。"
-    },
-    rule:"周计划：一三五上肢（吊杆·俯卧撑）｜二四六下肢（深蹲）｜每日唤醒操10min + 有氧多走一站｜单一动作坚持4周再换｜目标是体态重塑不是减重"
-  },
-  {
-    id:"speech", label:"口播练习", icon:"◇", color:"#5B8C6A",
-    topicLibrary:[
-      {cat:"职场·管理", topics:[
-        "如何看待国企中的「借势不借力」",
-        "一个人能不能同时做好两个角色（法务+团委）",
-        "向上汇报时，什么该说、什么不该说",
-        "如何接手前任留下的烂摊子",
-        "部门墙是怎么形成的，怎么拆",
-        "战略性沉默：什么时候不说话更有力量",
-        "如何管理一个比你资深、能力强的下属",
-        "信息差是优势还是负担"
-      ]},
-      {cat:"高端服务·国宾馆", topics:[
-        "什么是「被理解」的服务",
-        "一个好服务，应该让客人有感还是无感",
-        "标准化和人情味，怎么平衡",
-        "国宾馆和顶级商业酒店的本质区别",
-        "如何把「记住客人偏好」做成系统",
-        "服务里，专业和讨好的边界在哪",
-        "AI时代，真人服务的价值是什么",
-        "高端服务的「贵」，到底贵在哪"
-      ]},
-      {cat:"个人成长·心态", topics:[
-        "灾难化预期：我们为什么总把事想得更糟",
-        "聚光灯效应：别人真的那么在意你吗",
-        "锚点习惯：有些事能坚持，有些为什么不能",
-        "计划做得很细、执行总滞后，问题出在哪",
-        "体态重塑为什么比减重更值得追求",
-        "三十岁重新规划人生，晚不晚",
-        "如何与「过度理解别人却很少被理解」相处"
-      ]},
-      {cat:"观点·思辨", topics:[
-        "稳定和成长，哪个更值得追求",
-        "体制内的人，该不该想着创业",
-        "高端、线下、体验式服务还有没有未来",
-        "真实的人越来越稀缺，是机会还是焦虑",
-        "「文化产业管理」这个专业到底学的是什么",
-        "要不要主动申请下子公司当副总"
-      ]},
-      {cat:"即兴·生活", topics:[
-        "描述一个让你印象最深的服务瞬间",
-        "如果给三年前的自己一个建议",
-        "你最近一次改变想法，是因为什么",
-        "向外地朋友介绍一道上海菜",
-        "周末两天，你理想的安排是什么",
-        "用一分钟讲清你现在做的工作"
-      ]}
-    ],
-    fields:[
-      {key:"topic", label:"练习题目", ph:"点上方「选题」从题库挑，或直接输入"},
-      {key:"orec_o", label:"O · 观点", ph:"你的核心论点，一句话"},
-      {key:"orec_r", label:"R · 理由", ph:"为什么这么说"},
-      {key:"orec_e", label:"E · 案例", ph:"一个具体的例子"},
-      {key:"orec_c", label:"C · 总结", ph:"回扣观点，收束"},
-      {key:"recorded", label:"是否录音", ph:"是/否 + 时长"},
-      {key:"review", label:"自评要点", ph:"流畅度、逻辑、语速、口头禅…", multi:true}
-    ],
-    example:{
-      topic:"#17 如何看待国企中的「借势不借力」",
-      orec_o:"借势的核心是利用组织势能推动目标，而不是消耗个人关系资源",
-      orec_r:"因为个人关系是有限资产，用一次少一次；而组织势能是公共资源，借用不减值",
-      orec_e:"东湖青年说活动中，我没有请任何部门「帮忙」，而是让每个部门在活动中获得自己的曝光机会——他们是为自己参与，不是为我",
-      orec_c:"所以借势不是不求人，是设计一个所有人都想参与的结构",
-      recorded:"已录音 | 2分15秒（通勤途中）",
-      review:"语速偏快，后半段有加速倾向。「那个」口头禅出现3次。OREC结构完整但E部分展开不够，案例缺少画面感——下次试着加入一个具体场景描写。"
-    },
-    rule:"规则：通勤时间录音｜OREC框架（观点-理由-案例-总结）｜录了才算练了（计划不算执行）"
-  },
-  {
-    id:"observe", label:"场景观察", icon:"○", color:"#7A6EA0",
-    fields:[
-      {key:"where", label:"时间·地点·业态", ph:"在哪、什么类型（餐饮/酒店/零售/出行/其他）"},
-      {key:"attract", label:"① 什么吸引了你", ph:"让你停下脚步、走进去、多看一眼的那个点是什么", multi:true},
-      {key:"convert", label:"② 什么让你掏钱了", ph:"促成购买的临门一脚；或：差点要买、最后被什么打动", multi:true},
-      {key:"leave", label:"③ 什么让你扭头就走", ph:"劝退点、不舒服的瞬间、过度打扰、被冒犯感…（哪怕没进店）", multi:true},
-      {key:"insight", label:"对「被理解感」的启发", ph:"这个场景和你的服务理念有什么关联", multi:true},
-      {key:"transfer", label:"可迁移要素", ph:"能用在国宾馆/未来创业的什么地方"}
-    ],
-    example:{
-      where:"5月31日 下午 · 南京西路某买手集合店（零售）",
-      attract:"橱窗没有堆满商品，只放了三件单品 + 一段手写的选品理由。这种「替我筛选过」的克制感，让我停下来走了进去。",
-      convert:"店员没有跟在身后推销，而是在我盯着一件外套时自然说了句「这件版型偏窄，您肩宽，可能要大一码，我去后面拿」——她在帮我做决策，不是在卖货。这句话之后我基本就决定买了。",
-      leave:"隔壁另一家店：一进门三个店员同时围上来问「想找点什么」，灯光过亮、音乐过吵。那种「我成了猎物」的压迫感，让我十秒内退了出来。",
-      insight:"吸引我的是「被筛选过」，打动我的是「被理解了我的身材」，赶走我的是「被当成猎物」。三件事的内核都是——客人想要的是「你懂我」，而不是「你想卖我」。这正是那个鞋店销售员和门童的逻辑。",
-      transfer:"国宾馆迎宾环节：不要一拥而上的热情，要「克制的精准」。先观察、再开口，第一句话就命中客人的真实状态（累了、赶时间、想安静），而不是标准化问候。把「不打扰」也设计成一种服务。"
-    },
-    rule:"结构：吸引（停下）→ 转化（掏钱）→ 流失（走人），三段都要追问背后的「人心」｜重点看人的行为不看物的设计｜每次必写可迁移要素"
-  },
-  {
-    id:"mindset", label:"心态记录", icon:"△", color:"#C4915E",
-    fields:[
-      {key:"trigger", label:"触发事件", ph:"什么事情引发了情绪波动"},
-      {key:"reaction", label:"初始情绪反应", ph:"第一反应是什么"},
-      {key:"pattern", label:"识别到的模式", ph:"聚光灯效应/灾难化预期/他人评价锚定/价值回收焦虑/恐慌-快速恢复"},
-      {key:"handling", label:"处理方式", ph:"你实际怎么应对的", multi:true},
-      {key:"predict", label:"预测 vs 实际", ph:"你以为会怎样 → 实际发生了什么", multi:true}
-    ],
-    example:{
-      trigger:"向分管领导汇报东湖青年说活动方案",
-      reaction:"汇报前30分钟开始紧张，预设对方会否定方案，脑中反复排练被质疑后的回应",
-      pattern:"灾难化预期 + 上行汇报焦虑（这是老模式了）",
-      handling:"用了之前讨论过的方法：提前列出3个最可能的反对点并准备应对话术；同时提醒自己——过去5次汇报中，4次实际反馈好于预期。",
-      predict:"预测：方案被打回重做，领导质疑活动必要性\n实际：一次通过，领导只建议调整一个环节的时间安排，事后还主动说「这次准备得很充分」\n\n差距原因：又一次高估了负面结果的概率。恐慌→快速恢复的周期在缩短，这次大概15分钟就平复了。"
-    },
-    rule:"规则：必须写「预测vs实际」——这是纠正灾难化预期的核心工具｜识别已知模式（看老问题有没有改善，不是发现新问题）"
-  },
-  {
-    id:"journal", label:"自由日记", icon:"□", color:"#5A7D9A",
-    fields:[
-      {key:"text", label:"", ph:"今天最值得记住的一件事是什么？\n\n可以是一个想法、一段对话、一个决定、一个观察，或者只是想写点什么…", multi:true}
-    ],
-    example:{
-      text:"晚上哄完孩子睡觉，坐在客厅想了一会儿。东湖青年说结束后这两周，同时重启了口播、英语、国宾馆学习三条线，但每条线的实际执行都只有计划的一半。\n\n问题不是时间不够——爸妈帮忙带孩子已经腾出了大量时间。问题是每次要开始的时候，总觉得应该先做「更紧急的那件事」，结果在切换中消耗了意志力。\n\n也许该试试「锚定习惯」的思路：运动从来没断过，因为它不需要决策——时间到了就去。其他几条线也需要这种「不需要决策」的触发机制。明天试试把口播录音绑定在通勤开车的前5分钟，不想内容，直接按录音键开始说。"
-    },
-    rule:""
-  }
+var CATS=[
+ {id:"train",label:"训练",icon:"◆",color:"#D4764E",tag:"每日核心",core:true,weekdaySplit:true,modes:true,
+  groups:[
+   {sub:"身体",fields:[
+     {key:"wakeup",label:"唤醒操（10min）",ph:"完成 / 跳过 + 今早状态"},
+     {key:"main",label:"今日主训练",ph:"上肢：吊杆·俯卧撑 / 下肢：深蹲"},
+     {key:"spec",label:"组数·次数·进度",ph:"如：俯卧撑 4组×15 · 第2周/4周"},
+     {key:"cardio",label:"有氧",ph:"多走一站 / 今日步数"},
+     {key:"feel",label:"身体感受",ph:"泵感、力竭、酸痛、代偿…（可留空）"}]},
+   {sub:"口播",fields:[
+     {key:"topic",label:"题目",ph:"题库选题或自由输入"},
+     {key:"orec",label:"OREC 要点",ph:"观点→理由→案例→总结，简记即可",multi:true},
+     {key:"review",label:"录音 & 自评",ph:"是否录音、时长、语速、口头禅…",multi:true}]}
+  ],
+  topicLibrary:[
+   {cat:"职场·管理",topics:["如何看待国企中的「借势不借力」","一个人能不能同时做好两个角色（法务+团委）","向上汇报，什么该说什么不该说","如何接手前任留下的烂摊子","部门墙是怎么形成的，怎么拆","战略性沉默：什么时候不说话更有力量","如何管理一个比你资深、能力强的下属","怎么向不懂法的同事讲清一个合同风险","开会时如何用一句话把跑偏的讨论拉回来"]},
+   {cat:"高端服务",topics:["什么是「被理解」的服务","一个好服务，应该让客人有感还是无感","标准化和人情味怎么平衡","国宾馆和顶级商业酒店的本质区别","如何把「记住客人偏好」做成系统","服务里专业和讨好的边界在哪","AI时代真人服务的价值是什么","高端服务的「贵」到底贵在哪","怎么设计让客人「不被打扰」的服务","接待中出了纰漏，第一时间怎么补救"]},
+   {cat:"个人成长",topics:["灾难化预期：为什么总把事想得更糟","聚光灯效应：别人真的那么在意你吗","锚点习惯：有些事为什么能坚持","计划很细执行总滞后，问题在哪","体态重塑为什么比减重更值得追求","三十岁重新规划人生，晚不晚","压力大时为什么会暴食，怎么打断它","如何在情绪上头时给自己30秒缓冲","完美主义怎么拖垮执行力","如何与「过度理解别人却很少被理解」相处"]},
+   {cat:"观点·思辨",topics:["稳定和成长，哪个更值得追求","体制内的人该不该想着创业","高端、线下、体验式服务还有没有未来","真实的人越来越稀缺，是机会还是焦虑","「文化产业管理」这个专业到底学什么","要不要主动申请下子公司当副总","AI能取代法务吗，哪部分取代不了","为什么越贵的服务越要做减法"]},
+   {cat:"即兴·生活",topics:["描述一个让你印象最深的服务瞬间","如果给三年前的自己一个建议","你最近一次改变想法是因为什么","向外地朋友介绍一道上海菜","周末两天你理想的安排是什么","用一分钟讲清你现在做的工作","给孩子讲讲爸爸的工作是做什么的","推荐一个你最近觉得好用的方法"]}]},
+ {id:"state",label:"状态",icon:"△",color:"#C4915E",tag:"每日核心",core:true,
+  patterns:["灾难化预期","聚光灯","配得感不足","过度照顾·回避主张","执行前完美主义"],
+  soft:"突发→情绪→暴食往往是连着的。合起来记，是为了看清因果链，不是为了自责。",
+  fields:[
+   {key:"moodnote",label:"今天的情绪发生了什么",ph:"先选上方标签，再补一句：什么情境触发的、有多强",multi:true},
+   {key:"disrupt",label:"有没有被打断 / 重大事项",ph:"计划被什么打断了？发生了什么大事？（可留空）",multi:true},
+   {key:"predict",label:"预测 vs 实际",ph:"你以为会怎样 → 实际如何（纠正灾难化预期的关键）",multi:true},
+   {key:"body",label:"身体信号（饮食等）",ph:"有没有暴食/重口味？薯片烧烤泡芙…当时什么状态（饿/累/烦/无聊）？（可留空）",multi:true}]},
+ {id:"observe",label:"观察",icon:"○",color:"#7A6EA0",tag:"选填·建议每周",opt:true,
+  fields:[
+   {key:"where",label:"时间·地点·业态",ph:"在哪、什么类型（餐饮/酒店/零售/出行）"},
+   {key:"funnel",label:"吸引 → 购买 → 流失",ph:"什么吸引你停下？什么让你掏钱？什么让你扭头就走？",multi:true},
+   {key:"insight",label:"启发 & 可迁移",ph:"对「被理解感」的启发，能用在国宾馆/创业的地方",multi:true}]},
+ {id:"journal",label:"日记",icon:"□",color:"#5A7D9A",tag:"选填",opt:true,
+  fields:[{key:"text",label:"",ph:"今天最值得记住的一件事是什么？",multi:true}]}
+];
+// 在场 · 托底句库 v2（为田一人写）
+// 场景：DOUBT自我怀疑 / WEARY撑不下去 / SETBACK遭遇挫折 / LOST迷茫无向
+// 口吻在每个场景内混合：温暖·坚定·深邃
+var QUOTES = [
+  // ===== 自我怀疑「我是不是不行」=====
+  {sc:"自我怀疑", s:"你不是不行，你只是太想做好了。这份在乎，本身就是别人没有的力量。"},
+  {sc:"自我怀疑", s:"会怀疑自己的人，往往是因为标准比别人高。这不是缺陷，是你认真活着的证据。"},
+  {sc:"自我怀疑", s:"你已经走到这里了。回头看看那条路——它不是侥幸，是你一步步走出来的。"},
+  {sc:"自我怀疑", s:"「我是不是不行」这句话，你问过无数次，可每一次，你最后都行了。"},
+  {sc:"自我怀疑", s:"别人眼里的你，比你以为的要稳得多。是你对自己太苛刻了。"},
+  {sc:"自我怀疑", s:"你不需要先变得足够好才配站在这里。你站在这里，就已经是答案。"},
+  {sc:"自我怀疑", s:"自我怀疑的浪头打过来时，记住：它会退的，而你还站着。"},
+  {sc:"自我怀疑", s:"能同时扛起两个角色、照顾一家人的人，没有资格说自己不行。"},
+  {sc:"自我怀疑", s:"你担心配不上，恰恰说明你珍惜。珍惜的人，终会配得上。"},
+  {sc:"自我怀疑", s:"今天觉得自己不够，是因为你看见了更高的地方。能看见，就走得到。"},
+  {sc:"自我怀疑", s:"你不是冒充者。你是一个还在成长、且一直没有停下的人。"},
+  {sc:"自我怀疑", s:"把「我不配」轻轻放下吧。你已经为它付了太多年的利息。"},
+  {sc:"自我怀疑", s:"你身上那两样别人学不来的东西——读懂人心、把复杂讲简单——它们一直都在。"},
+  {sc:"自我怀疑", s:"真正不行的人，不会在深夜里担心自己行不行。你会，所以你行。"},
+  {sc:"自我怀疑", s:"你不必赢过谁。你只要比昨天的自己，多站稳一寸。"},
+
+  // ===== 撑不下去「太累了想放弃」=====
+  {sc:"撑不下去", s:"累了就停一下，不是放弃。歇够了再走，路还在那里等你。"},
+  {sc:"撑不下去", s:"你扛到现在已经很了不起了。允许自己喘口气，不是软弱，是智慧。"},
+  {sc:"撑不下去", s:"想放弃的念头来过很多次，可你一次都没真的放下。这就是你的韧性。"},
+  {sc:"撑不下去", s:"今天只要不倒下，就是胜利。明天的力气，明天再说。"},
+  {sc:"撑不下去", s:"体能那条线你从没断过——因为它教会了你：坚持不靠意志，靠一次次小小的「还在」。"},
+  {sc:"撑不下去", s:"你不是一个人在扛。家里有人替你托着，你只管往前，回头总有人在。"},
+  {sc:"撑不下去", s:"最难的时候，不必想全程。先迈出今天这一步，就够了。"},
+  {sc:"撑不下去", s:"疲惫是真的，但你比疲惫更真。它会过去，你会留下。"},
+  {sc:"撑不下去", s:"你照顾了那么多人，现在，请也这样温柔地照顾一下自己。"},
+  {sc:"撑不下去", s:"撑不下去的时候，把目标缩到最小：今天，喝口水，深呼吸，然后只做一件事。"},
+  {sc:"撑不下去", s:"你不是机器，会累是应该的。但你心里那团火，从来没真的灭过。"},
+  {sc:"撑不下去", s:"再坚持一下下就好——不是为了证明什么，是因为你值得看到后来的风景。"},
+  {sc:"撑不下去", s:"低谷不是终点，是你蓄力的地方。趴一会儿，但别忘了你为什么出发。"},
+  {sc:"撑不下去", s:"你已经赢过很多次「想放弃」了。今天，再赢一次。"},
+  {sc:"撑不下去", s:"慢下来没关系，只要方向还对。乌龟也到得了它想去的地方。"},
+
+  // ===== 遭遇挫折「搞砸了、被否定」=====
+  {sc:"遭遇挫折", s:"搞砸了，不代表你不行。它只代表：你敢上场，而上场的人才会遇到这些。"},
+  {sc:"遭遇挫折", s:"被否定的是那件事，不是你这个人。别让一句评价，定义了整个你。"},
+  {sc:"遭遇挫折", s:"你以为扛不过去的那些事，现在回头看，都成了你站立的地方。这次也会。"},
+  {sc:"遭遇挫折", s:"跌倒不丢人。丢人是骗自己没跌过——而你从不骗自己，这是你最珍贵的诚实。"},
+  {sc:"遭遇挫折", s:"今天的难堪，三个月后大概率连你自己都想不起来。但你扛过它的样子，会留下。"},
+  {sc:"遭遇挫折", s:"被批评的那一刻很疼，可你已经把恢复的时间，从一整天压到了一刻钟。你在变强。"},
+  {sc:"遭遇挫折", s:"一次失手，不抵消你之前所有的对。账不是这么算的。"},
+  {sc:"遭遇挫折", s:"领导的脸色会变，事情会过去，可你解决问题的能力，一次比一次硬。"},
+  {sc:"遭遇挫折", s:"挫折是来交学费的，不是来宣判的。你交了，就拿到了别人没有的东西。"},
+  {sc:"遭遇挫折", s:"允许自己难过一会儿。情绪走完了，那个能站起来的你，自然会回来。"},
+  {sc:"遭遇挫折", s:"你不是失败了，你是拿到了一份「下次怎么做更好」的说明书。"},
+  {sc:"遭遇挫折", s:"被打倒的人很多，爬起来还认真复盘的人很少。你是后者。"},
+  {sc:"遭遇挫折", s:"这件事没做成，但你做这件事时的判断力、担当，没有一样消失。"},
+  {sc:"遭遇挫折", s:"今天很糟，但这不是结局，只是其中一页。翻过去，故事还在写。"},
+  {sc:"遭遇挫折", s:"真正打不垮你的，从来不是没有挫折，是你每次都选择再站起来。"},
+
+  // ===== 迷茫无向「不知道为什么坚持」=====
+  {sc:"迷茫无向", s:"看不清方向时，先别急着找答案。把今天该做的事做好，路会在脚下慢慢显形。"},
+  {sc:"迷茫无向", s:"你坚持，不一定是为了某个终点。有时候，「不放弃自己」这件事本身，就够有意义。"},
+  {sc:"迷茫无向", s:"迷茫，是因为你还在认真想「怎么活得对」。麻木的人，从不迷茫。"},
+  {sc:"迷茫无向", s:"你想做的那件事——让人感到被真正理解——本身就是这个时代最稀缺的方向。"},
+  {sc:"迷茫无向", s:"不知道为什么坚持的时候，回到最朴素的那个理由：你想成为一个更好的、自己认得出的人。"},
+  {sc:"迷茫无向", s:"路不是先看清才走的，是走着走着才清晰的。你已经在路上了。"},
+  {sc:"迷茫无向", s:"AI 越聪明，一个真诚在场的人就越珍贵。你正在成为那种人——这就是方向。"},
+  {sc:"迷茫无向", s:"你当年放下的那个兴趣，也许只是寄存在了未来，等你有力气把它接回来。"},
+  {sc:"迷茫无向", s:"暂时没有答案，不等于走错了路。允许自己在雾里多走几步，雾会散。"},
+  {sc:"迷茫无向", s:"你不需要现在就想清楚一辈子。想清楚这一周，已经很好了。"},
+  {sc:"迷茫无向", s:"稳定还是成长，没有标准答案。但你愿意为这个问题失眠，说明你没有在敷衍人生。"},
+  {sc:"迷茫无向", s:"方向感不是天生的，是一次次「试了、错了、调整」攒出来的。你正在攒。"},
+  {sc:"迷茫无向", s:"你最好的两样能力——感知和翻译——不会因为迷茫而消失，它们会带你找到该去的地方。"},
+  {sc:"迷茫无向", s:"三十岁重新规划人生不晚。晚的是一直站在原地问「晚不晚」。"},
+  {sc:"迷茫无向", s:"当下这一步看似微不足道，可所有清晰的未来，都是这样一步步踩出来的。"}
 ];
 
+
+// ===== 金句：场景交错排序 + 每次打开随机 =====
+var _bySc={};QUOTES.forEach(function(q){(_bySc[q.sc]=_bySc[q.sc]||[]).push(q);});
+var _scOrder=["自我怀疑","撑不下去","遭遇挫折","迷茫无向"];
+var QSEQ=[];var _k=0;while(QSEQ.length<QUOTES.length){var _s=_scOrder[_k%4];_k++;if(_bySc[_s]&&_bySc[_s].length)QSEQ.push(_bySc[_s].shift());}
+var curQuote=QSEQ[Math.floor(Math.random()*QSEQ.length)]; // 每次加载随机一句
+function nextQuote(){var n;do{n=QSEQ[Math.floor(Math.random()*QSEQ.length)];}while(n===curQuote&&QSEQ.length>1);curQuote=n;render();}
+
+// ===== 工具 =====
 var WK=["日","一","二","三","四","五","六"];
 var MO=["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"];
 function fmt(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
 function prs(s){var a=s.split("-").map(Number);return new Date(a[0],a[1]-1,a[2]);}
 function esc(s){return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
 
+// ===== 存储（沿用 zaichang-v1，含旧数据迁移） =====
 var STORE_KEY="zaichang-v1";
 var entries={};
 try{entries=JSON.parse(localStorage.getItem(STORE_KEY)||"{}");}catch(e){entries={};}
+
+// 旧数据迁移：把 1.0 的 7 维度结构映射到 2.0 的 4 块
+function migrate(){
+  var changed=false;
+  Object.keys(entries).forEach(function(k){
+    var e=entries[k];
+    if(e._v2)return; // 已迁移
+    var n={_ts:e._ts||Date.now(),_v2:true,_tags:[]};
+    // train.身体 <- exercise
+    var ex=e.exercise||{};
+    n.train={wakeup:ex.wakeup||"",main:ex.main||"",spec:ex.spec||"",cardio:ex.cardio||"",feel:ex.feel||"",
+      topic:(e.speech||{}).topic||"",
+      orec:[((e.speech||{}).orec_o||""),((e.speech||{}).orec_r||""),((e.speech||{}).orec_e||""),((e.speech||{}).orec_c||"")].filter(Boolean).join(" / "),
+      review:[((e.speech||{}).recorded||""),((e.speech||{}).review||"")].filter(Boolean).join("　")};
+    // state <- mindset + disrupt + diet
+    var mi=e.mindset||{};
+    n.state={
+      moodnote:[mi.trigger,mi.reaction,mi.pattern,mi.handling].filter(Boolean).join("　"),
+      disrupt:[(e.disrupt||{}).event,(e.disrupt||{}).impact].filter(Boolean).join("　"),
+      predict:mi.predict||"",
+      body:[(e.diet||{}).what,(e.diet||{}).context].filter(Boolean).join("　")};
+    // observe <- observe(旧)
+    var ob=e.observe||{};
+    n.observe={where:ob.where||"",
+      funnel:[ob.attract,ob.convert,ob.leave].filter(Boolean).join(" → "),
+      insight:[ob.insight,ob.transfer].filter(Boolean).join("　")};
+    // journal
+    n.journal={text:(e.journal||{}).text||""};
+    // 旧 mindset.pattern 文本里如含已知标签，迁为 tags
+    ["灾难化","聚光灯","配得感","完美主义"].forEach(function(t){if((mi.pattern||"").indexOf(t)>=0){var full={"灾难化":"灾难化预期","聚光灯":"聚光灯","配得感":"配得感不足","完美主义":"执行前完美主义"}[t];if(n._tags.indexOf(full)<0)n._tags.push(full);}});
+    entries[k]=n;changed=true;
+  });
+  if(changed){try{localStorage.setItem(STORE_KEY,JSON.stringify(entries));}catch(e){}}
+}
+migrate();
 function persist(){try{localStorage.setItem(STORE_KEY,JSON.stringify(entries));}catch(e){}}
 
-var state={tab:"write", selDate:new Date(), expandedCat:null, showEx:{}, calY:new Date().getFullYear(), calM:new Date().getMonth()};
-var draft={};
-function loadDraft(){var k=fmt(state.selDate);draft=entries[k]?JSON.parse(JSON.stringify(entries[k])):{};}
+// ===== 状态 =====
+var state={tab:"write",selDate:new Date(),expanded:"train",calY:new Date().getFullYear(),calM:new Date().getMonth(),mode:{},pickerOpen:false,pickerCat:0};
+var draft={},dtags=[];
+function loadDraft(){var k=fmt(state.selDate);if(entries[k]){draft=JSON.parse(JSON.stringify(entries[k]));dtags=(draft._tags||[]).slice();}else{draft={};dtags=[];}}
 loadDraft();
 
-function splitFor(date){
-  var wd=date.getDay();
-  if(wd===0)return{type:"rest",text:"周日 · 休息日（可做唤醒操 + 散步）"};
-  if(wd===1||wd===3||wd===5)return{type:"upper",text:"周"+WK[wd]+" · 上肢训练（吊杆 · 俯卧撑）"};
-  return{type:"lower",text:"周"+WK[wd]+" · 下肢训练（深蹲）"};
-}
-function catFilled(catId){
-  var cd=draft[catId]||{};var cat=CATS.find(function(c){return c.id===catId;});
-  return cat.fields.some(function(f){return cd[f.key]&&cd[f.key].trim();});
-}
-function entryFilledCats(entry){
-  return CATS.filter(function(c){return c.fields.some(function(f){return (entry[c.id]||{})[f.key]&&(entry[c.id]||{})[f.key].trim();});});
-}
-function hasAnyContent(){return CATS.some(function(c){return catFilled(c.id);});}
+function toast(m){var t=document.getElementById("toast");t.textContent=m;t.style.display="block";setTimeout(function(){t.style.display="none";},2000);}
+function splitFor(d){var w=d.getDay();if(w===0)return{type:"rest",text:"周日 · 休息日"};if(w===1||w===3||w===5)return{type:"upper",text:"周"+WK[w]+" · 上肢（吊杆·俯卧撑）"};return{type:"lower",text:"周"+WK[w]+" · 下肢（深蹲）"};}
 
-function toast(msg){var t=document.getElementById("toast");t.textContent=msg;t.style.display="block";setTimeout(function(){t.style.display="none";},2000);}
+// 字段读写：draft[catId][key]
+function gv(cid,k){return (draft[cid]||{})[k]||"";}
+function onField(cid,k,el){if(!draft[cid])draft[cid]={};draft[cid][k]=el.value;if(el.tagName==="TEXTAREA"){el.style.height="auto";el.style.height=Math.max(60,el.scrollHeight)+"px";}}
 
-// ---- field updates without re-render (preserve focus) ----
-function onField(catId,key,el){
-  if(!draft[catId])draft[catId]={};
-  draft[catId][key]=el.value;
-  if(el.tagName==="TEXTAREA"){el.style.height="auto";el.style.height=Math.max(64,el.scrollHeight)+"px";}
+function catFilled(cid){
+  var cat=CATS.find(function(c){return c.id===cid;});var cd=draft[cid]||{};
+  var keys=cat.groups?cat.groups.reduce(function(a,g){return a.concat(g.fields.map(function(f){return f.key;}));},[]):cat.fields.map(function(f){return f.key;});
+  var any=keys.some(function(k){return cd[k]&&cd[k].trim();});
+  if(cid==="state"&&dtags.length)any=true;
+  return any;
 }
-
-function pickTopic(t){
-  if(!draft.speech)draft.speech={};
-  draft.speech.topic=t;
-  render();
-  setTimeout(function(){var inp=document.querySelector('[data-fld="speech.topic"]');if(inp){inp.focus();}},50);
-}
+function hasAny(){return CATS.some(function(c){return catFilled(c.id);});}
 
 function save(){
-  if(!hasAnyContent()){toast("还没有填写内容");return;}
+  if(!hasAny()){toast("还没有填写内容");return;}
   var k=fmt(state.selDate);
-  var clean={};
-  CATS.forEach(function(c){
-    if(draft[c.id]){clean[c.id]=draft[c.id];}
-  });
-  clean._ts=Date.now();
-  entries[k]=clean;
-  persist();
-  toast("已保存 ✓");
-  render();
+  var clean={_ts:Date.now(),_v2:true,_tags:dtags.slice()};
+  CATS.forEach(function(c){if(draft[c.id])clean[c.id]=draft[c.id];});
+  entries[k]=clean;persist();toast("已保存 ✓");render();
 }
-function del(){
-  var k=fmt(state.selDate);
-  if(!entries[k])return;
-  if(!confirm("确定删除"+(state.selDate.getMonth()+1)+"月"+state.selDate.getDate()+"日的记录吗？"))return;
-  delete entries[k];persist();draft={};toast("已删除");render();
-}
+function del(){var k=fmt(state.selDate);if(!entries[k])return;if(!confirm("确定删除"+(state.selDate.getMonth()+1)+"月"+state.selDate.getDate()+"日的记录吗？"))return;delete entries[k];persist();draft={};dtags=[];toast("已删除");render();}
 
 function setTab(t){state.tab=t;render();}
-function toggleCat(id){state.expandedCat=state.expandedCat===id?null:id;render();}
-function toggleEx(id,e){if(e)e.stopPropagation();state.showEx[id]=!state.showEx[id];render();}
-function selectDate(s){state.selDate=prs(s);state.tab="write";state.expandedCat=null;loadDraft();render();}
+function tg(id){state.expanded=state.expanded===id?null:id;state.pickerOpen=false;render();}
+function tgTag(p){var i=dtags.indexOf(p);if(i>=0)dtags.splice(i,1);else dtags.push(p);render();}
+function sm(id,m){state.mode[id]=m;state.pickerOpen=false;render();}
+function tp(){state.pickerOpen=!state.pickerOpen;render();}
+function spc(i){state.pickerCat=i;render();}
+function pk(t){if(!draft.train)draft.train={};draft.train.topic=t;state.pickerOpen=false;render();}
+function rt(){var all=[];CATS[0].topicLibrary.forEach(function(g){all=all.concat(g.topics);});pk(all[Math.floor(Math.random()*all.length)]);}
+function selDate(s){state.selDate=prs(s);state.tab="write";state.expanded="train";loadDraft();render();}
 function backToday(){state.selDate=new Date();loadDraft();render();}
-function calNav(dir){
-  state.calM+=dir;
-  if(state.calM<0){state.calM=11;state.calY--;}
-  if(state.calM>11){state.calM=0;state.calY++;}
-  render();
-}
+function calNav(dir){state.calM+=dir;if(state.calM<0){state.calM=11;state.calY--;}if(state.calM>11){state.calM=0;state.calY++;}render();}
 
-// ---- topic picker state ----
-var pickerOpen=false, pickerCat=0;
-function togglePicker(){pickerOpen=!pickerOpen;render();}
-function setPickerCat(i){pickerCat=i;render();}
-function randomTopic(){
-  var all=[];CATS.find(function(c){return c.id==="speech";}).topicLibrary.forEach(function(g){all=all.concat(g.topics);});
-  pickTopic(all[Math.floor(Math.random()*all.length)]);
-  pickerOpen=false;
-}
+function entryFilled(e){return CATS.filter(function(c){var cd=e[c.id]||{};var keys=c.groups?c.groups.reduce(function(a,g){return a.concat(g.fields.map(function(f){return f.key;}));},[]):c.fields.map(function(f){return f.key;});var any=keys.some(function(k){return cd[k]&&String(cd[k]).trim();});if(c.id==="state"&&(e._tags||[]).length)any=true;return any;});}
 
-// ================= RENDER =================
+// ===== 渲染 =====
+function fldHTML(cid,f){
+  var v=esc(gv(cid,f.key));var h='<div class="fld">';
+  if(f.label)h+='<label>'+f.label+'</label>';
+  if(f.multi)h+='<textarea placeholder="'+esc(f.ph)+'" oninput="onField(\''+cid+'\',\''+f.key+'\',this)" onfocus="this.style.borderColor=\'#999\'" onblur="this.style.borderColor=\'rgba(120,100,80,.10)\'">'+v+'</textarea>';
+  else h+='<input value="'+v+'" placeholder="'+esc(f.ph)+'" oninput="onField(\''+cid+'\',\''+f.key+'\',this)" onfocus="this.style.borderColor=\'#999\'" onblur="this.style.borderColor=\'rgba(120,100,80,.10)\'">';
+  return h+'</div>';
+}
 function render(){
-  var html="";
-  html+='<div class="hdr"><h1>在 场</h1><p>每天，真的在一次</p></div>';
-  html+='<div class="tabs">';
-  [["write","记录"],["cal","日历"],["stats","数据"]].forEach(function(t){
-    html+='<button class="tab'+(state.tab===t[0]?" on":"")+'" onclick="setTab(\''+t[0]+'\')">'+t[1]+'</button>';
-  });
-  html+='</div><div class="body">';
-  if(state.tab==="write")html+=renderWrite();
-  else if(state.tab==="cal")html+=renderCal();
-  else html+=renderStats();
-  html+='</div>';
-  document.getElementById("app").innerHTML=html;
-  // autosize textareas
-  document.querySelectorAll("textarea").forEach(function(t){t.style.height="auto";t.style.height=Math.max(64,t.scrollHeight)+"px";});
+  var d=state.selDate;
+  var h='<div class="hdr"><h1>在 场</h1><p>每天，真的在一次</p></div>';
+  h+='<div class="quote"><div class="s">'+esc(curQuote.s)+'</div><div class="meta"><span class="sc">— 给「'+curQuote.sc+'」的你</span><button class="refresh" onclick="nextQuote()">换一句 ↻</button></div></div>';
+  h+='<div class="tabs">';
+  [["write","记录"],["cal","日历"],["stats","数据"]].forEach(function(t){h+='<button class="tab'+(state.tab===t[0]?" on":"")+'" onclick="setTab(\''+t[0]+'\')">'+t[1]+'</button>';});
+  h+='</div><div class="body">';
+  if(state.tab==="write")h+=renderWrite();
+  else if(state.tab==="cal")h+=renderCal();
+  else h+=renderStats();
+  h+='</div>';
+  document.getElementById("app").innerHTML=h;
+  document.querySelectorAll("textarea").forEach(function(t){t.style.height="auto";t.style.height=Math.max(60,t.scrollHeight)+"px";});
 }
-
 function renderWrite(){
-  var d=state.selDate, isToday=fmt(d)===fmt(new Date());
-  var h='<div class="fade">';
-  h+='<div class="dline"><div><div class="d">'+(d.getMonth()+1)+'月'+d.getDate()+'日 · 星期'+WK[d.getDay()]+'</div>'+(isToday?'<div class="today">今天</div>':'')+'</div>';
+  var d=state.selDate,isToday=fmt(d)===fmt(new Date());
+  var h='<div class="fade"><div class="dline"><div><div class="d">'+(d.getMonth()+1)+'月'+d.getDate()+'日 · 星期'+WK[d.getDay()]+'</div>'+(isToday?'<div class="today">今天</div>':'')+'</div>';
   if(!isToday)h+='<button class="backbtn" onclick="backToday()">回到今天</button>';
   h+='</div>';
-
   CATS.forEach(function(cat){
-    var expanded=state.expandedCat===cat.id, filled=catFilled(cat.id);
-    h+='<div class="cat" style="border-left-color:'+cat.color+'">';
-    // bar
-    h+='<div class="catbar" onclick="toggleCat(\''+cat.id+'\')">';
-    h+='<div class="left"><span class="ico" style="color:'+cat.color+'">'+cat.icon+'</span><span class="lbl" style="color:'+cat.color+'">'+cat.label+'</span>';
-    if(filled)h+='<span class="dot" style="background:'+cat.color+'"></span>';
-    h+='</div><div class="right">';
-    if(expanded)h+='<button class="exbtn" style="border-color:'+cat.color+'55;color:'+cat.color+'" onclick="toggleEx(\''+cat.id+'\',event)">'+(state.showEx[cat.id]?"收起范例":"查看范例")+'</button>';
-    h+='<span class="chev'+(expanded?" open":"")+'">›</span></div></div>';
-
-    if(expanded){
+    var ex=state.expanded===cat.id,filled=catFilled(cat.id);
+    h+='<div class="cat" style="border-left-color:'+cat.color+'"><div class="catbar" onclick="tg(\''+cat.id+'\')"><div class="left"><span class="ico" style="color:'+cat.color+'">'+cat.icon+'</span><span class="lbl" style="color:'+cat.color+'">'+cat.label+'</span><span class="tag'+(cat.core?" core":"")+'">'+cat.tag+'</span>'+(filled?'<span class="dot" style="background:'+cat.color+'"></span>':'')+'</div><div class="right"><span class="chev'+(ex?" open":"")+'">›</span></div></div>';
+    if(ex){
       h+='<div class="fade">';
-      if(state.showEx[cat.id])h+=renderExample(cat);
-      if(cat.weekdaySplit){
-        var sp=splitFor(d), bg=sp.type==="rest"?"rgba(120,100,80,.06)":cat.color+"14", fg=sp.type==="rest"?"#9a9088":cat.color;
-        h+='<div class="splithint" style="background:'+bg+'"><span class="t" style="color:'+fg+'">今日计划</span><span class="v" style="color:'+fg+'">'+sp.text+'</span></div>';
+      if(cat.weekdaySplit){var sp=splitFor(d),bg=sp.type==="rest"?"rgba(120,100,80,.06)":cat.color+"14",fg=sp.type==="rest"?"#9a9088":cat.color;h+='<div class="splithint" style="background:'+bg+'"><span class="t" style="color:'+fg+'">今日计划</span><span class="v" style="color:'+fg+'">'+sp.text+'</span></div>';}
+      if(cat.groups){
+        cat.groups.forEach(function(g){
+          h+='<div class="sub" style="color:'+cat.color+'">'+g.sub+'</div>';
+          if(g.sub==="口播"&&cat.modes){
+            var m=state.mode[cat.id]||"lib";
+            h+='<div class="modesw"><button style="border-color:'+cat.color+'66;background:'+(m==="lib"?cat.color:"transparent")+';color:'+(m==="lib"?"#fff":cat.color)+'" onclick="event.stopPropagation();sm(\''+cat.id+'\',\'lib\')">题库选题</button><button style="border-color:'+cat.color+'66;background:'+(m==="free"?cat.color:"transparent")+';color:'+(m==="free"?"#fff":cat.color)+'" onclick="event.stopPropagation();sm(\''+cat.id+'\',\'free\')">自由安排</button></div>';
+            if(m==="lib")h+=pickerHTML(cat);
+          }
+          g.fields.forEach(function(f){
+            if(g.sub==="口播"&&f.key==="topic"&&(state.mode[cat.id]||"lib")==="free")h+=fldHTML(cat.id,{key:"topic",label:"题目（自由输入）",ph:"自己定一个题目"});
+            else h+=fldHTML(cat.id,f);
+          });
+        });
+      } else {
+        if(cat.soft)h+='<div class="note-soft">🌱 '+cat.soft+'</div>';
+        if(cat.patterns){
+          h+='<div style="font-size:14px;font-weight:500;color:#8a8078;margin:8px 0 6px;letter-spacing:1px">今天的情绪模式（可多选）</div><div class="ptags">';
+          cat.patterns.forEach(function(p){var on=dtags.indexOf(p)>=0;h+='<button class="ptag'+(on?" on":"")+'" style="border-color:'+cat.color+'66;'+(on?"background:"+cat.color+";":"color:"+cat.color)+'" onclick="event.stopPropagation();tgTag(\''+p+'\')">'+p+'</button>';});
+          h+='</div>';
+        }
+        cat.fields.forEach(function(f){h+=fldHTML(cat.id,f);});
       }
-      if(cat.topicLibrary)h+=renderPicker(cat);
-      cat.fields.forEach(function(f){
-        var val=esc((draft[cat.id]||{})[f.key]||"");
-        h+='<div class="fld">';
-        if(f.label)h+='<label>'+f.label+'</label>';
-        if(f.multi)h+='<textarea data-fld="'+cat.id+'.'+f.key+'" placeholder="'+esc(f.ph)+'" oninput="onField(\''+cat.id+'\',\''+f.key+'\',this)" onfocus="this.style.borderColor=\''+cat.color+'\'" onblur="this.style.borderColor=\'rgba(120,100,80,.10)\'">'+val+'</textarea>';
-        else h+='<input data-fld="'+cat.id+'.'+f.key+'" value="'+val+'" placeholder="'+esc(f.ph)+'" oninput="onField(\''+cat.id+'\',\''+f.key+'\',this)" onfocus="this.style.borderColor=\''+cat.color+'\'" onblur="this.style.borderColor=\'rgba(120,100,80,.10)\'">';
-        h+='</div>';
-      });
-      if(cat.rule&&!state.showEx[cat.id])h+='<div class="rulehint">'+esc(cat.rule)+'</div>';
       h+='</div>';
     } else if(filled){
       var prev="";
-      for(var i=0;i<cat.fields.length;i++){var v=(draft[cat.id]||{})[cat.fields[i].key];if(v&&v.trim()){prev=v.trim();break;}}
+      if(cat.id==="state"&&dtags.length)prev=dtags.join("、");
+      if(!prev){var keys=cat.groups?cat.groups.reduce(function(a,g){return a.concat(g.fields.map(function(f){return f.key;}));},[]):cat.fields.map(function(f){return f.key;});for(var i=0;i<keys.length;i++){var v=gv(cat.id,keys[i]);if(v&&v.trim()){prev=v.trim();break;}}}
       h+='<div class="preview">'+esc(prev)+'</div>';
     }
     h+='</div>';
   });
-
-  var hc=hasAnyContent();
+  var hc=hasAny();
   h+='<div class="actions"><button class="savebtn" style="background:'+(hc?"#3a3228":"#d0c8be")+'" onclick="save()">保 存</button>';
   if(entries[fmt(d)])h+='<button class="delbtn" onclick="del()">删除</button>';
   h+='</div></div>';
   return h;
 }
-
-function renderExample(cat){
-  var h='<div class="excard" style="border-color:'+cat.color+'40">';
-  h+='<div class="h"><span class="t" style="color:'+cat.color+'">范例</span><button class="x" onclick="toggleEx(\''+cat.id+'\',event)">×</button></div>';
-  cat.fields.forEach(function(f){
-    var v=cat.example[f.key];if(!v)return;
-    if(f.label)h+='<div class="k">'+f.label+'</div>';
-    h+='<div class="v">'+esc(v)+'</div>';
-  });
-  if(cat.rule)h+='<div class="rule">'+esc(cat.rule)+'</div>';
-  h+='</div>';
-  return h;
+function pickerHTML(cat){
+  var h='<div class="picker"><div class="row"><button class="pbtn" style="flex:1;border-color:'+cat.color+'66;color:'+cat.color+';background:'+(state.pickerOpen?cat.color+"12":"transparent")+'" onclick="event.stopPropagation();tp()">'+(state.pickerOpen?"收起题库":"展开题库")+'</button><button class="pbtn" style="padding:9px 16px;border-color:'+cat.color+'66;color:'+cat.color+'" onclick="event.stopPropagation();rt()">随机</button></div>';
+  if(state.pickerOpen){h+='<div class="panel"><div class="ctabs">';cat.topicLibrary.forEach(function(g,i){h+='<button class="ctab" style="background:'+(state.pickerCat===i?cat.color:"rgba(120,100,80,.08)")+';color:'+(state.pickerCat===i?"#fff":"#8a8078")+'" onclick="event.stopPropagation();spc('+i+')">'+g.cat+'</button>';});h+='</div><div>';cat.topicLibrary[state.pickerCat].topics.forEach(function(t){h+='<div class="topic" onclick="event.stopPropagation();pk(\''+t.replace(/'/g,"\\'")+'\')" onmouseover="this.style.background=\''+cat.color+'14\'" onmouseout="this.style.background=\'transparent\'">'+esc(t)+'</div>';});h+='</div></div>';}
+  return h+'</div>';
 }
-
-function renderPicker(cat){
-  var h='<div class="picker"><div class="row">';
-  h+='<button class="pbtn" style="flex:1;border-color:'+cat.color+'66;color:'+cat.color+';background:'+(pickerOpen?cat.color+"12":"transparent")+'" onclick="togglePicker()">'+(pickerOpen?"收起题库":"选题")+'</button>';
-  h+='<button class="pbtn" style="padding:8px 16px;border-color:'+cat.color+'66;color:'+cat.color+'" onclick="randomTopic()">随机</button></div>';
-  if(pickerOpen){
-    h+='<div class="panel fade"><div class="ctabs">';
-    cat.topicLibrary.forEach(function(g,i){
-      h+='<button class="ctab" style="background:'+(pickerCat===i?cat.color:"rgba(120,100,80,.08)")+';color:'+(pickerCat===i?"#fff":"#8a8078")+'" onclick="setPickerCat('+i+')">'+g.cat+'</button>';
-    });
-    h+='</div><div>';
-    cat.topicLibrary[pickerCat].topics.forEach(function(t){
-      h+='<div class="topic" onclick="pickTopic(\''+t.replace(/'/g,"\\'")+'\')" onmouseover="this.style.background=\''+cat.color+'14\'" onmouseout="this.style.background=\'transparent\'">'+esc(t)+'</div>';
-    });
-    h+='</div></div>';
-  }
-  h+='</div>';
-  return h;
-}
-
 function renderCal(){
-  var dim=new Date(state.calY,state.calM+1,0).getDate();
-  var fd=new Date(state.calY,state.calM,1).getDay();
-  var today=fmt(new Date()), sel=fmt(state.selDate);
-  var h='<div class="fade"><div class="cal">';
-  h+='<div class="nav"><button onclick="calNav(-1)">‹</button><span class="m">'+state.calY+'年 '+MO[state.calM]+'</span><button onclick="calNav(1)">›</button></div>';
-  h+='<div class="wk">'+WK.map(function(w){return '<div>'+w+'</div>';}).join("")+'</div>';
-  h+='<div class="days">';
+  var dim=new Date(state.calY,state.calM+1,0).getDate(),fd=new Date(state.calY,state.calM,1).getDay();
+  var today=fmt(new Date()),sel=fmt(state.selDate);
+  var h='<div class="fade"><div class="cal"><div class="nav"><button onclick="calNav(-1)">‹</button><span class="m">'+state.calY+'年 '+MO[state.calM]+'</span><button onclick="calNav(1)">›</button></div>';
+  h+='<div class="wk">'+WK.map(function(w){return '<div>'+w+'</div>';}).join("")+'</div><div class="days">';
   for(var i=0;i<fd;i++)h+='<div></div>';
-  for(var dd=1;dd<=dim;dd++){
-    var ds=state.calY+"-"+String(state.calM+1).padStart(2,"0")+"-"+String(dd).padStart(2,"0");
-    var cls="day"+(ds===today?" today":"")+(ds===sel?" sel":"");
-    var dot=entries[ds]?'<span class="d"></span>':"";
-    h+='<div class="'+cls+'" onclick="selectDate(\''+ds+'\')">'+dd+dot+'</div>';
-  }
-  h+='</div></div>';
-  h+='<div class="sectitle">近期记录</div>';
+  for(var dd=1;dd<=dim;dd++){var ds=state.calY+"-"+String(state.calM+1).padStart(2,"0")+"-"+String(dd).padStart(2,"0");var cls="day"+(ds===today?" today":"")+(ds===sel?" sel":"");h+='<div class="'+cls+'" onclick="selDate(\''+ds+'\')">'+dd+(entries[ds]?'<span class="d"></span>':"")+'</div>';}
+  h+='</div></div><div class="sectitle">近期记录</div>';
   var keys=Object.keys(entries).sort().reverse().slice(0,10);
-  if(keys.length===0)h+='<div class="empty">还没有记录</div>';
-  else keys.forEach(function(k){
-    var d=prs(k), fc=entryFilledCats(entries[k]);
-    h+='<div class="reccard" onclick="selectDate(\''+k+'\')"><div class="rd">'+(d.getMonth()+1)+'月'+d.getDate()+'日 · 星期'+WK[d.getDay()]+'</div><div class="tags">';
-    fc.forEach(function(c){h+='<span style="color:'+c.color+'">'+c.icon+' '+c.label+'</span>';});
-    h+='</div></div>';
-  });
-  h+='</div>';
-  return h;
+  if(!keys.length)h+='<div class="empty">还没有记录</div>';
+  else keys.forEach(function(k){var dt=prs(k),fc=entryFilled(entries[k]);h+='<div class="reccard" onclick="selDate(\''+k+'\')"><div class="rd">'+(dt.getMonth()+1)+'月'+dt.getDate()+'日 · 星期'+WK[dt.getDay()]+'</div><div class="tags">';fc.forEach(function(c){h+='<span style="color:'+c.color+'">'+c.icon+' '+c.label+'</span>';});h+='</div></div>';});
+  return h+'</div>';
 }
-
 function renderStats(){
   var totalDays=Object.keys(entries).length;
   var mk=new Date().getFullYear()+"-"+String(new Date().getMonth()+1).padStart(2,"0");
   var monthDays=Object.keys(entries).filter(function(k){return k.indexOf(mk)===0;}).length;
-  var streak=0, sd=new Date();
-  while(true){var k=fmt(sd);if(entries[k]&&entryFilledCats(entries[k]).length>0){streak++;sd.setDate(sd.getDate()-1);}else break;}
-  var totalItems=0;Object.keys(entries).forEach(function(k){totalItems+=entryFilledCats(entries[k]).length;});
-  var catCount={};CATS.forEach(function(c){catCount[c.id]=0;});
-  Object.keys(entries).forEach(function(k){entryFilledCats(entries[k]).forEach(function(c){catCount[c.id]++;});});
-  var maxC=Math.max(1,Math.max.apply(null,CATS.map(function(c){return catCount[c.id];})));
-
+  var streak=0,sd=new Date();while(true){var k=fmt(sd);if(entries[k]&&entryFilled(entries[k]).length>0){streak++;sd.setDate(sd.getDate()-1);}else break;}
+  var totalItems=0;Object.keys(entries).forEach(function(k){totalItems+=entryFilled(entries[k]).length;});
+  var cc={};CATS.forEach(function(c){cc[c.id]=0;});Object.keys(entries).forEach(function(k){entryFilled(entries[k]).forEach(function(c){cc[c.id]++;});});
+  var maxC=Math.max(1,Math.max.apply(null,CATS.map(function(c){return cc[c.id];})));
   var h='<div class="fade"><div class="stats">';
-  [["累计天数",totalDays],["本月记录",monthDays],["连续天数",streak],["总条目",totalItems]].forEach(function(s){
-    h+='<div class="scard"><div class="n">'+s[1]+'</div><div class="l">'+s[0]+'</div></div>';
-  });
+  [["累计天数",totalDays],["本月记录",monthDays],["连续天数",streak],["总条目",totalItems]].forEach(function(s){h+='<div class="scard"><div class="n">'+s[1]+'</div><div class="l">'+s[0]+'</div></div>';});
   h+='</div><div class="sectitle">分类统计</div>';
-  CATS.forEach(function(c){
-    var n=catCount[c.id], w=Math.round(n/maxC*100);
-    h+='<div class="barrow"><div class="bh"><span class="bl" style="color:'+c.color+'">'+c.icon+' '+c.label+'</span><span class="bv">'+n+' 天</span></div>';
-    h+='<div class="bartrack"><div class="barfill" style="width:'+w+'%;background:'+c.color+';min-width:'+(n>0?4:0)+'px"></div></div></div>';
-  });
+  CATS.forEach(function(c){var n=cc[c.id],w=Math.round(n/maxC*100);h+='<div class="barrow"><div class="bh"><span class="bl" style="color:'+c.color+'">'+c.icon+' '+c.label+'</span><span class="bv">'+n+' 天</span></div><div class="bartrack"><div class="barfill" style="width:'+w+'%;background:'+c.color+';min-width:'+(n>0?4:0)+'px"></div></div></div>';});
   h+='<div class="sectitle">本月热力</div><div class="heat">';
   var dim=new Date(new Date().getFullYear(),new Date().getMonth()+1,0).getDate();
-  for(var dd=1;dd<=dim;dd++){
-    var k=mk+"-"+String(dd).padStart(2,"0");
-    var cnt=entries[k]?entryFilledCats(entries[k]).length:0;
-    var op=cnt===0?0.06:0.15+cnt*0.17;
-    h+='<div class="heatd" title="'+dd+'日: '+cnt+'项" style="background:rgba(212,118,78,'+op+');color:'+(cnt>0?"#fff":"#c0b8ae")+'">'+dd+'</div>';
-  }
-  h+='</div></div>';
-  return h;
+  for(var dd=1;dd<=dim;dd++){var k=mk+"-"+String(dd).padStart(2,"0");var cnt=entries[k]?entryFilled(entries[k]).length:0;var op=cnt===0?0.06:0.15+cnt*0.21;h+='<div class="heatd" title="'+dd+'日:'+cnt+'项" style="background:rgba(212,118,78,'+op+');color:'+(cnt>0?"#fff":"#c0b8ae")+'">'+dd+'</div>';}
+  return h+'</div></div>';
 }
-
 render();
 </script>
 </body>
